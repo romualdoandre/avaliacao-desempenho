@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="teste2_avd2" transaction-type="RESOURCE_LOCAL">
+		<class>teste2_avd2_model.Autoavaliacao</class>
+		<class>teste2_avd2_model.AvaliacaoChefia</class>
+		<class>teste2_avd2_model.AvaliacaoEquipe</class>
+		<class>teste2_avd2_model.Avd</class>
+		<class>teste2_avd2_model.Servidor</class>
+		<properties>
+			<property name="javax.persistence.schema-generation.drop-source" value="script-then-metadata"/>
+			<property name="eclipselink.jdbc.batch-writing" value="JDBC"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://preproducao.ufrb.edu.br/avaliacao_desempenho"/>
+			<property name="javax.persistence.jdbc.user" value="3086919"/>
+			<property name="javax.persistence.jdbc.password" value="estagiario"/>
+			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+		</properties>
+	</persistence-unit>
+</persistence>

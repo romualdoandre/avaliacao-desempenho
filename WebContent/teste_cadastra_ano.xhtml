@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:form="http://www.springframework.org/tags/form"
+	xmlns:spring="http://www.springframework.org/tags"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jstl/core">
+<h:body>
+	<h:form>
+	
+		<h:outputLabel value="Digite o ano" />
+		<h:inputText value="#{avd.anoAvd}" />
+		<h:commandButton value="Ok" action="#{avd.addAvd}" />
+
+		<table id="table-1" border="1">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>ANO</th>
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach var="avd" items="#{avd.listAll_avd()}">
+
+					<tr>
+						<td>#{avd.idAvd}</td>
+						<td>#{avd.anoAvd}</td>
+					</tr>
+
+				</c:forEach>
+			</tbody>
+		</table>
+		
+	</h:form>
+</h:body>
+</html>

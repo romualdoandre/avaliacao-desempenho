@@ -1,0 +1,25 @@
+
+
+/*# sourceMappingURL=style.css.map */
+
+div.a{
+	text-align: center;
+	
+}
+
+table {
+	border-collapse:collapse;
+	border:1px solid #CCC;
+}
+
+#tabela tr {
+	border:1px solid #CCC;
+}
+
+#tabela td {
+	width:60px;
+	height:60px;
+	padding:30px;
+	border:2px solid #CCC;
+}
+
