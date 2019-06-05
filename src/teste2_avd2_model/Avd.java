@@ -22,7 +22,7 @@ public class Avd implements EntidadeBase {
 	private Long id;
 
 	@Column(name="ano_avd")
-	private Integer anoAvd;
+	private Integer ano;
 	
 	/*
 	//bi-directional many-to-one association to Autoavaliacao
@@ -52,12 +52,17 @@ public class Avd implements EntidadeBase {
 		this.id = id;
 	}
 
-	public Integer getAnoAvd() {
-		return this.anoAvd;
+	public Integer getAno() {
+		return this.ano;
 	}
 
-	public void setAnoAvd(Integer anoAvd) {
-		this.anoAvd = anoAvd;
+	public void setAno(Integer ano) {
+		this.ano = ano;
+	}
+	
+	@Override
+	public String toString() {
+		return id+": "+ano;
 	}
 	/*
 	public List<Autoavaliacao> getAutoavaliacaos() {

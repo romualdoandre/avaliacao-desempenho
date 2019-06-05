@@ -13,7 +13,7 @@ public class testaAutoav {
 		
 		 DaoGenerico<Avd> daoAvd = new DaoGenerico<Avd>();
 		 
-		 avd.setAnoAvd(2000);
+		 avd.setAno(2000);
 		 
 		 daoAvd.saveOrUpdate(avd);
 		 

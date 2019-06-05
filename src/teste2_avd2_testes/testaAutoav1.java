@@ -19,7 +19,7 @@ public class testaAutoav1 {
 		
 
 		Avd aval1 = new Avd();
-		aval1.setAnoAvd(2060);
+		aval1.setAno(2060);
 		
 		
 		AvdController avdcont = new AvdController();

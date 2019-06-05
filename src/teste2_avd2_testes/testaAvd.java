@@ -10,7 +10,7 @@ public class testaAvd {
 		
 		Avd aval = new Avd();
 		
-		aval.setAnoAvd(2090);
+		aval.setAno(2090);
 		
 		AvdController avdcon = new AvdController();
 		avdcon.addAvd(aval);
