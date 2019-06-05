@@ -3,12 +3,36 @@
 	xmlns:form="http://www.springframework.org/tags/form"
 	xmlns:spring="http://www.springframework.org/tags"
 	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:c="http://java.sun.com/jstl/core">
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:f="http://java.sun.com/jsf/core"
+	>
+	
 <h:body>
 	<h:form>
 	<h:outputLabel for="test" >Digite o ano da avaliação</h:outputLabel>
-	<h:inputText id="test" value="#{avdBean.avd.anoAvd}" />
+	<h:inputText id="test" value="#{avdBean.avd.ano}" />
 		<h:commandButton action="#{avdBean.add}" value="OK" />
+		<table id="table-1" border="1">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>ANO</th>
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach var="avd" items="#{avdBean.listAll}">
+
+					<tr>
+						<td>#{avd.id}</td>
+						<td>#{avd.ano}</td>
+						<td><h:commandButton  action="#{avdBean.remove}" value="remover" >
+						 <f:param name="id" value="#{avd.id}"></f:param>
+						</h:commandButton></td>
+					</tr>
+
+				</c:forEach>
+			</tbody>
+		</table>
 	</h:form>
 </h:body>
 </html>

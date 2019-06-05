@@ -8,8 +8,8 @@
 	<h:form>
 	
 		<h:outputLabel value="Digite o ano" />
-		<h:inputText value="#{avd.anoAvd}" />
-		<h:commandButton value="Ok" action="#{avd.addAvd}" />
+		<h:inputText value="#{avdBean.avd.anoAvd}" />
+		<h:commandButton value="Ok" action="#{avdBean.add}" />
 
 		<table id="table-1" border="1">
 			<thead>
